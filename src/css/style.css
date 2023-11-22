@@ -1,0 +1,77 @@
+/* 基本样式重置 */
+* {
+    box-sizing: border-box; /* 从元素的边框开始计算宽高 */
+    margin: 0; /* 移除默认外边距 */
+    padding: 0; /* 移除默认内边距 */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 设置字体 */
+    background-color: #f4f4f4; /* 页面背景颜色 */
+    color: #333; /* 文本颜色 */
+    line-height: 1.6; /* 行高 */
+    padding: 20px; /* 页面内边距 */
+}
+
+/* 横幅样式 */
+.banner {
+    background-color: #0055ff; /* 横幅背景颜色 */
+    color: white; /* 横幅文字颜色 */
+    text-align: center; /* 文字居中 */
+    padding: 20px 0; /* 横幅内边距 */
+    font-size: 24px; /* 文字大小 */
+    border-radius: 8px; /* 边框圆角 */
+    margin-bottom: 20px; /* 下外边距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 主要内容区域 */
+.main-form {
+    display: flex; /* 使用Flex布局 */
+    justify-content: space-between; /* 项目之间留有空间 */
+    gap: 20px; /* 项目之间的间隙 */
+}
+
+/* 输入和输出区域的共同样式 */
+.input-area{
+    flex-basis: 30%; /* 占据父容器宽度的45% */
+    padding: 10px;
+    border: 1px solid #ddd; /* 轻微边框 */
+    margin-right: 10px; /* 与输出区域之间的间隙 */
+    display: flex; /* 使用Flex布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    justify-content: center; /* 子元素垂直居中 */
+    align-items: center; /* 子元素水平居中 */
+}
+.output-area{
+    flex: 1; /*弹性布局，占据可用空间*/
+    background-color: white; /* 背景颜色 */
+    padding: 20px; /* 内边距 */
+    border-radius: 8px; /* 边框圆角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    min-height: 400px; /* 最小高度 */
+}
+
+/* 录音按钮样式 */
+.record {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 20px;
+    background-color: #FF3B30; /* 红色背景 */
+    color: white;
+    border: none;
+    border-radius: 50%; /* 圆形按钮 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), /* 外部阴影 */
+                0 4px 10px rgba(0, 0, 0, 0.2); /* 更深的外部阴影 */
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    user-select: none; /* 防止选中文本 */
+}
+
+.record:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 点击时的阴影效果 */
+    transform: translateY(2px); /* 点击时轻微下移 */
+}
